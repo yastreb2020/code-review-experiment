@@ -21,7 +21,8 @@ int main(){
     check(res != 1 || n < 1);
 
     // people info input
-    person arr[n];
+    person *arr = malloc(sizeof(person) * n);
+    
     res = 3;
     for (int i = 0; i < n && res == 3; i++){
         res = scanf("%s", &arr[i].name);
@@ -56,6 +57,8 @@ int main(){
     if(count == 0){
         printf("Nothing");
     }
+
+    free(arr);
 
     return 0;
 }
