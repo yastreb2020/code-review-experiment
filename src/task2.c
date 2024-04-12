@@ -11,7 +11,7 @@ int main(){
     res = scanf("%lf", &radius);
     if(res != 1 || radius <= 0){
         printf("n/a");
-        return 0;
+        return 1;
     }
 
     volume = (4.0 / 3) * M_PI * pow(radius, 3);
